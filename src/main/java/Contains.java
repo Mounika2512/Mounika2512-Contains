@@ -1,16 +1,22 @@
-
-
 public class Contains {
-
     /**
-     * This method should search an array to see if that array contains some value.
-     * You will need to use a for loop to check every value of the array to see if it matches the target value.
+     * Searches the given array to check if it contains the target value.
      *
-     * @param arr array to be manipulated.
+     * @param arr    array to be searched.
      * @param target the value that the method should be searching for.
      * @return true if arr contains target, false otherwise.
      */
-    public boolean arrayContains(int[] arr, int target){
-        return false;
+    public boolean arrayContains(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return false; // Return false for an empty or null array.
+        }
+
+        for (int value : arr) {
+            if (value == target) {
+                return true; // Return true if the target value is found.
+            }
+        }
+
+        return false; // Return false if the target value is not found in the array.
     }
 }
